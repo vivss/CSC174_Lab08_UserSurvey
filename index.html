@@ -46,8 +46,58 @@ The data from this research can help developers create “personas,” or fictio
 		<h2>Feedback Survey</h2>
 		<form method="post" action="">
 
+			<label for="name">Name: </label>
+			<input type="text" name="name" id="name"><br>
 
-			<input type="submit" value="submit">
+			<label for="email">Email: </label>
+			<input type="email" name="email" id="email"><br>
+
+			<label for="phone">Phone:</label>
+			<input type="tel" name="phone" id="phone"><br><br>
+
+			<!--Checkboxes-->
+			
+			<div>I am a: </div>
+
+			<input type="checkbox" name="student" id="student">
+			<label for="student">Student</label><br>
+			
+			<input type="checkbox" name="edu" id="edu">
+			<label for="edu">Educator</label><br>
+			
+			<input type="checkbox" name="designer" id="designer">
+			<label for="designer">Designer</label><br>
+
+			<input type="checkbox" name="business" id="business">
+			<label for="business">Business Person</label><br>
+
+			<input type="checkbox" name="other" id="other">
+			<label for="other">Other</label><br><br>
+
+			<!--Radio Buttons-->
+			
+			<div>The information on this page was helpful: </div>
+
+			<input type="radio" name="radio" id="radio1">
+			<label for="radio1">Strongly Disagree</label><br>
+	
+			<input type="radio" name="radio" id="radio2">
+			<label for="radio2">Disagree</label><br>
+			
+			<input type="radio" name="radio" id="radio3">
+			<label for="radio3">Neutral</label><br>
+
+			<input type="radio" name="radio" id="radio4">
+			<label for="radio4">Agree</label><br>
+
+			<input type="radio" name="radio" id="radio5">
+			<label for="radio5">Strongly Agree</label><br><br>
+
+			
+			<label for="">Do you have any recommendations for our site? </label><br>
+			<textarea name="recs" id="recs" rows="8" cols="80"></textarea><br><br>
+
+			<input type="submit" value="Submit">
 		</form>
 </body>
 
