@@ -264,6 +264,10 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 svg:not(:root) {

@@ -30,10 +30,11 @@ font-weight: 300;
     padding-bottom: 0px;
 }
 .imagebox{
-  width: 480px;
-  height: 320px;
-  padding: 20px 5px 20px 5px;
-  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 .mx-auto{
     vertical-align: baseline;
@@ -58,6 +59,7 @@ h2 {
 li {
   font-family: 'Gotham Narrow', Arial, sans-serif;
   font-weight: 300;
+  margin-left: 5%;
 }
 p {
   line-height: 1.70rem;
