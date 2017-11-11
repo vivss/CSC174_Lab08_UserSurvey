@@ -1,0 +1,66 @@
+@font-face {
+font-family: "Bebas Neue";
+src: url("fonts/bebas-neue/BebasNeue.otf");
+}
+@font-face {
+font-family: "Gotham Narrow";
+src: url("fonts/Gotham Narrow Light/Gotham Narrow Light.otf");
+font-weight: 300;
+}
+@font-face {
+  font-family: "Myriad Pro Semibold Condensed";
+  src: url("fonts/Myriad Pro Semibold Condensed/Myriad Pro Semibold Condensed.otf");
+}
+.bg-primary{
+  background-image: url("../images/ux-design-head.jpg");
+  background-size: cover;
+  height:100%;
+}
+.navbar-brand{
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+.headersection h1, p {
+  text-align: left;
+  margin-left: 5%;
+  padding: 0;
+}
+.headersection {
+    margin-top: 250px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.imagebox{
+  width: 480px;
+  height: 320px;
+  padding: 20px 5px 20px 5px;
+  margin: 0;
+}
+.mx-auto{
+    vertical-align: baseline;
+}
+.btn-lg {
+  background-color: rgb(67, 76, 91);
+  border-radius: 8px;
+  font-family: 'Myriad Pro Semibold Condensed', Arial, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 0.75;
+  letter-spacing: 1.35px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+h2 {
+  font-family: 'Myriad Pro Semibold Condensed', Arial, sans-serif;
+}
+
+li {
+  font-family: 'Gotham Narrow', Arial, sans-serif;
+  font-weight: 300;
+}
+p {
+  line-height: 1.70rem;
+  font-family: 'Gotham Narrow', Arial, sans-serif;
+  font-weight: 300;
+}
