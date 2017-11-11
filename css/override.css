@@ -35,6 +35,7 @@ font-weight: 300;
   margin-right: auto;
   margin-bottom: 5%;
   margin-top: 5%;
+  width: 80%;
 }
 .mx-auto{
     vertical-align: baseline;
@@ -45,6 +46,15 @@ font-weight: 300;
   font-family: 'Myriad Pro Semibold Condensed', Arial, sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1.5px;
+}
+.col-md-6 input{
+  margin-left:10%;
+}
+.nav-item{
+  margin-left: 0%;
+}
+.message{
+  padding-top:0%;
 }
 h1 {
   font-size: 4rem;

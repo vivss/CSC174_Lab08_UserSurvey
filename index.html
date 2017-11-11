@@ -124,70 +124,84 @@
   		<img class="imagebox" src="images/evaluation.jpg" alt="data graphics">
   			<p class="lead">Just because a product officially launches doesn’t mean the UX work is over. In fact, UX is an ongoing process that continues for as long as a product’s in use. Developers must continually test product performance to see if it meets customer satisfaction and if any improvements can be made. Measurements might include items such as how likely customers are to recommend products to others and how they use the product itself.<br>
 
-          Ultimately, the true goal of UX is to allow businesses to make products that are useful and pleasurable for customers to purchase. When done right, UX is one of the most valuable assets a company can offer.</p>
+          Ultimately, the true goal of UX is to allow businesses to make products that are useful and pleasurable for customers to purchase. When done right, UX is one of the most valuable assets a company can offer.</p><br><br><br>
+          <h2>Thanks for reading our article! We'd love to get feedback. Please fill out the below survey to help us out!</h2>
       </div>
     </section>
-
-    <section id="message" class="bg-light">
-      <div class="container">
-        <h2>Thanks for reading our article! We'd love to get feedback. Please fill out the below survey to help us out!</h2>
-      </div>
-    </section><!--content-->
+    <!--content-->
 		<section id="survey">
       <div class="container">
   			<h2>Feedback Survey</h2>
   			<form method="post" action="">
-
-  				<label for="name">Name: </label>
-  				<input type="text" name="name" id="name"><br>
-
-  				<label for="email">Email: </label>
-  				<input type="email" name="email" id="email"><br><br>
-
-
+          <div class="row">
+            <div class="col-sm-4 mx-auto">
+      				<label for="fname">First Name: </label>
+      				<input type="text" name="fname" id="fname"><br>
+            </div>
+            <div class="col-sm-4 mx-auto">
+              <label for="lname">Last Name: </label>
+              <input type="text" name="lname" id="fname"><br>
+            </div>
+            <div class="col-sm-4 mx-auto">
+    				      <label for="email">Email: </label>
+    				      <input type="email" name="email" id="email"><br><br>
+            </div>
+          </div>
   				<!--Checkboxes-->
+          <div class="row">
+    				<div class="col-md-4 mx-auto">
+              I am a: <br>
+            </div>
+            <div class="col-md-3 mx-auto">
+      				<input type="checkbox" name="student" id="student">
+      				<label for="student">Student</label><br>
 
-  				<div>I am a: </div>
+      				<input type="checkbox" name="edu" id="edu">
+      				<label for="edu">Educator</label><br>
 
-  				<input type="checkbox" name="student" id="student">
-  				<label for="student">Student</label><br>
+      				<input type="checkbox" name="designer" id="designer">
+      				<label for="designer">Designer</label><br>
 
-  				<input type="checkbox" name="edu" id="edu">
-  				<label for="edu">Educator</label><br>
+      				<input type="checkbox" name="business" id="business">
+      				<label for="business">Business Person</label><br>
 
-  				<input type="checkbox" name="designer" id="designer">
-  				<label for="designer">Designer</label><br>
+      				<input type="checkbox" name="other" id="other">
+      				<label for="other">Other</label><br><br>
+            </div>
+            <div class="col-md-5 mx-auto">
+            </div>
+          </div>
+          <div class="row">
+    				<!--Radio Buttons-->
+    				<div class="col-md-4 mx-auto">
+    				      The information on this page was helpful: <br>
+            </div>
+            <div class="col-md-3 mx-auto">
+    				<input type="radio" name="radio" id="radio1">
+    				<label for="radio1">Strongly Disagree</label><br>
 
-  				<input type="checkbox" name="business" id="business">
-  				<label for="business">Business Person</label><br>
+    				<input type="radio" name="radio" id="radio2">
+    				<label for="radio2">Disagree</label><br>
 
-  				<input type="checkbox" name="other" id="other">
-  				<label for="other">Other</label><br><br>
+    				<input type="radio" name="radio" id="radio3">
+    				<label for="radio3">Neutral</label><br>
 
-  				<!--Radio Buttons-->
+    				<input type="radio" name="radio" id="radio4">
+    				<label for="radio4">Agree</label><br>
 
-  				<div>The information on this page was helpful: </div>
-
-  				<input type="radio" name="radio" id="radio1">
-  				<label for="radio1">Strongly Disagree</label><br>
-
-  				<input type="radio" name="radio" id="radio2">
-  				<label for="radio2">Disagree</label><br>
-
-  				<input type="radio" name="radio" id="radio3">
-  				<label for="radio3">Neutral</label><br>
-
-  				<input type="radio" name="radio" id="radio4">
-  				<label for="radio4">Agree</label><br>
-
-  				<input type="radio" name="radio" id="radio5">
-  				<label for="radio5">Strongly Agree</label><br><br>
-
-
+    				<input type="radio" name="radio" id="radio5">
+    				<label for="radio5">Strongly Agree</label><br><br>
+          </div>
+          <div class="col-md-5">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
   				<label for="recs">Do you have any recommendations for our site? </label><br>
   				<textarea name="recs" id="recs" rows="8" cols="80"></textarea><br><br>
-
-  				<input type="submit" value="Submit">
+        </div>
+        </div>
+  				<input class="btn-lg text-white" type="submit" value="Submit">
   			</form>
       </div>
 		</section><!--survey-->
