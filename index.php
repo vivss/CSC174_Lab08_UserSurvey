@@ -1,3 +1,42 @@
+<?php
+if(isset($_POST['fname'])) {
+  // Process the form
+  
+include 'connection.php';
+
+$fname = Trim(stripslashes($_POST["fname"]));
+$lname = Trim(stripslashes($_POST["lname"]));
+$email = Trim(stripslashes($_POST["email"]));
+$software = $_POST["software"]; //it's an array
+$software = implode(',', $software);
+$helpful = $_POST["helpful"];
+$recommendation = Trim(stripslashes($_POST["recs"]));
+
+
+$fname = mysqli_real_escape_string($connection, $fname);
+$lname = mysqli_real_escape_string($connection, $lname);
+$recommendation = mysqli_real_escape_string($connection, $recommendation);
+
+$query  = "INSERT INTO uxsurvey";
+$query .= " ( email, software, helpful, recommendation, first_name, last_name";
+$query .= ") VALUES (";
+$query .= "  '{$email}', '{$software}', '{$helpful}', '$recommendation', '$fname', '$lname'";
+$query .= ")";
+
+$result = mysqli_query($connection, $query);
+
+echo "Thank you for submitting the survey!";
+
+mysqli_close($connection);
+
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang = "en">
 
@@ -16,8 +55,10 @@
   <link href = "css/override.css" rel="stylesheet">
 </head>
 
+
 <body id="page-top">
   <!-- Navigation -->
+  <!--
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">UX Design Process</a>
@@ -50,8 +91,7 @@
         </ul>
       </div>
     </div>
-  </nav>
-
+  </nav>  -->
   <header class="bg-primary text-left">
     <div class="headersection">
       <h1>The UX Design Process:</h1>
@@ -131,7 +171,7 @@
 		<section id="survey">
       <div class="container">
   			<h2>Feedback Survey</h2>
-  			<form method="post" action="survey-action.php">
+  			<form method="post" action="index.php">
           <div class="row">
             <div class="col-sm-4 mx-auto">
       				<label for="fname">First Name: </label>
