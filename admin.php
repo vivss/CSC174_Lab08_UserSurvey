@@ -11,21 +11,41 @@
 	// 2. Perform database query
 	$query  = "SELECT * ";
 	$query .= "FROM uxsurvey ";
-	
+
 
 	$result = mysqli_query($connection, $query);
-	
+
 ?>
 
 <!doctype html>
 <html>
 <head>
-	<title>User Survey Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>User Survey Data</title>
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href = "css/override.css" rel="stylesheet">
 </head>
 <body>
-
-	<h1>User Survey Data</h1>
-
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">UX Design Process</a>
+    </div>
+  </nav>
+	<header class="bg-primary text-left">
+		<div class="headersection">
+			<h1>User Survey Data</h1>
+		</div>
+	</header>
+	<section id="tablebody">
+		<div class="container">
 	<table border>
 
 <?php
@@ -49,7 +69,23 @@
 	</table>
 
 	<br>
-	<a href="#">Back to the previous form</a>
+	<a href="index.html" class="btn-lg text-white">Back to the previous form</a>
+	</div>
+	</section>
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Team Bangkok, 2017</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 </body>
 </html>
