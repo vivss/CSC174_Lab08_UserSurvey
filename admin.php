@@ -33,7 +33,7 @@
   <link href="css/scrolling-nav.css" rel="stylesheet">
   <link href = "css/override.css" rel="stylesheet">
 </head>
-<body>
+<body  id="page-top">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">UX Design Process</a>
@@ -86,6 +86,9 @@
 
 		<!-- Plugin JavaScript -->
 		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>
