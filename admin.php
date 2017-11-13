@@ -59,7 +59,7 @@
 			<td><?php echo $uxsurvey["first_name"]; ?></td>
 			<td><?php echo $uxsurvey["last_name"]; ?></td>
 			<td><?php echo $uxsurvey["email"]; ?></td>
-			<td><?php echo $uxsurvey["career"]; ?></td>
+			<td><?php echo $uxsurvey["software"]; ?></td>
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
 		</tr>
