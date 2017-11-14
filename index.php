@@ -50,8 +50,8 @@
             <a class="nav-link js-scroll-trigger" href="#survey">Survey</a>
           </li>
         </ul>
-      </div>
-    </div>
+      </div><!--collapse navbar-collapse-->
+    </div><!--container-->
   </nav>  
   <header class="bg-primary text-left">
     <div class="headersection">
@@ -72,8 +72,8 @@
       			<li>Tech support and product education</li>
       		</ul>
       	<p class="lead"> A good UX is usually defined by its elegance and ease of use. It presents a seamless combination of engineering and marketing, as well as elements of graphic, industrial and interface design. In this article we explain the foundations for the UX Design process which will help you create better user experiences.</p>
-      </div>
-    </section>
+      </div><!--container-->
+    </section><!--introduction-->
 
 		<section id="research" class="bg-light">
       <div class="container">
@@ -81,17 +81,16 @@
         <img class="imagebox" src="images/user-research.png" alt="Diverse users icons">
      			<p class="lead">To create a great user experience, developers must first take the time necessary to understand their end users. Conducting research helps developers get into customers’ mindsets. Common modes of research include listening to and observing customers; interviewing; and offering online surveys.
              The data from this research can help developers create “personas,” or fictional representations of real end users, designed to depict their motivations, needs, goals and expectations. In doing this, designers are better able to keep the customer’s mindset at the forefront of everything they do.</p>
-      </div>
-      </div>
-    </section>
+      </div><!--container-->
+    </section><!--research-->
 
 		<section id="design">
       <div class="container">
   			<h2>Design</h2>
         <img class="imagebox" src="images/design.png" alt="wireframe">
   			<p class="lead">Once enough research is collected, developers can then begin to think about how to design their products. In the design phase, developers begin to structure their content and think about the “customer journey,” or the series of steps the end user will take when using the product.It’s common to use “information architecture,” the process of structuring, labeling and organizing content. This is done using “wireframing,” the act of physically creating an illustration that demonstrates how a site, software program or app will look.These techniques help designers increase customer self-sufficiency, improve the effectiveness of page navigation and enhance the overall customer experience.</p>
-      </div>
-    </section>
+      </div><!--container-->
+    </section><!--design-->
 
 		<section id="prototyping" class="bg-light">
       <div class="container">
@@ -106,8 +105,8 @@
   					<li>Checking to see that products are functional and usable</li>
   				</ul>
           <p class="lead"> Prototyping generally occurs before any coding can begin.</p>
-
-		</section>
+        </div><!--container-->
+		</section><!--prototyping-->
 
 		<section id="testing">
       <div class="container">
@@ -115,8 +114,8 @@
         <img class="imagebox" src="images/testing.jpg" alt="user testing">
   			<p class="lead">After a solid prototype is built, developers are then able to test their product. In UX, tests can be as simple as observing customer/product interactions or as complex as presenting different versions of a product to the public to see which is better received. Developers may offer questionnaires and surveys or even do further interviews with customers to identify spots of difficulty or confusion. Because the purpose of testing is to eliminate problems, it should ideally be done as early as possible
   			</p>
-      </div>
-		</section>
+      </div><!--container-->
+		</section><!--testing-->
 
 		<section id="evaluation"  class="bg-light">
       <div class="container">
@@ -126,8 +125,8 @@
 
           Ultimately, the true goal of UX is to allow businesses to make products that are useful and pleasurable for customers to purchase. When done right, UX is one of the most valuable assets a company can offer.</p><br><br><br>
           <h2>Thanks for reading our article! We'd love to get feedback. Please fill out the below survey to help us out!</h2>
-      </div>
-    </section>
+      </div><!--container-->
+    </section><!--evaluation-->
     <!--content-->
 
     <!-- Thank you message -->
@@ -166,16 +165,16 @@
               <input type="checkbox" class="software" name="software[]" value="balsamiq" id="balsamiq">
               <label for="balsamiq">Balsamiq</label><br>
 
-              <input type="checkbox" class="software" name="software[]"value="sketch" id="sketch">
+              <input type="checkbox" class="software" name="software[]" value="sketch" id="sketch">
               <label for="sketch">Sketch</label><br>
 
-              <input type="checkbox" class="software" name="software[]"value="illustrator" id="illustrator">
+              <input type="checkbox" class="software" name="software[]" value="illustrator" id="illustrator">
               <label for="illustrator">Adobe Illustrator</label><br>
 
               <input type="checkbox" class="software" name="software[]" value="invision" id="invision">
               <label for="invision">Invision</label><br>
 
-              <input type="checkbox" class="software" name="software[]"value="another" id="another">
+              <input type="checkbox" class="software" name="software[]" value="another" id="another">
               <label for="another">Another app</label><br>
 
               <input type="checkbox" class="software" name="software[]" value="none" id="none">
@@ -217,7 +216,7 @@
         </div>
   				<input class="btn-lg text-white" type="submit" value="Submit" id="submit-no-reload">
   			</form>
-      </div>
+      </div><!--container-->
     </section><!--survey-->
 
 

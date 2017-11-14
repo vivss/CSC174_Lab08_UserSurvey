@@ -174,9 +174,6 @@
       </div>
 	</section><!--survey-->
 	
-
-
-
 	<br>
 	<a href="index.php" class="btn-lg text-white">Back to the previous form</a>
 	</div>
