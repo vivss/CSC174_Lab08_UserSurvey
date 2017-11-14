@@ -65,6 +65,7 @@
 <?php } ?>
 
 	</table>
+	<div id="delete-msg" class="hide"></div>
 
 	<br>
 	<a href="index.html" class="btn-lg text-white">Back to the previous form</a>
@@ -90,7 +91,7 @@
     <!-- Custom JavaScript for this theme -->
 	<script src="js/scrolling-nav.js"></script>
 	<!-- Delete action -->
-	<script src="js/delete-action.js"></script>
+	<script src="js/delete.js"></script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ $('#delete').click(function() {
         data:{'id':id},
         success:function(msg)
         {   
+            $('#delete-msg').removeClass('hide');
             $('#delete-msg').append("Item ID"+id+"has been deleted.");
             $(id_remove).remove();
         }
