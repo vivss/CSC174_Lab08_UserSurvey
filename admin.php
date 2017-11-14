@@ -43,6 +43,27 @@
 		<div class="container">
 	<table border id="data-table">
 
+    <div id="tip-q1" class="tip">
+      Design software used
+    </div>
+
+    <div id="tip-q2" class="tip">
+      Page helpfulness
+    </div>
+
+    <div id="tip-q3" class="tip">
+      Recommendations for site
+    </div>
+    <!--Table head-->
+    <tr id="admin-head">
+      <td>ID</td>
+      <td>fname</td>
+      <td>lname</td>
+      <td>email</td>
+      <td id="table-q1">Q1</td>
+      <td id="table-q2">Q2</td>
+      <td id="table-q3">Q3</td>
+    </tr>
 <?php
 	// 3. Use returned data (if any)
 	while($uxsurvey = mysqli_fetch_assoc($result)) {
@@ -202,7 +223,7 @@
 	<!-- Update action -->
 	<script src="js/click-handling.js"></script>
 	<script src="js/update-form.js"></script> 
-
+  <script src="js/hover-tip.js"></script> 
 </body>
 </html>
 

@@ -80,3 +80,21 @@ p {
 .hide {
   display: none !important;
 }
+
+#admin-head td {
+  font-weight: bold;
+}
+
+.tip {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: rgb(67, 76, 91);
+  border-radius: 6px;
+  padding: 3px;
+  white-space: nowrap;
+}
+/*.tip p{
+    margin-left: 0;
+
+}*/
