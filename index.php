@@ -28,23 +28,28 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item" id="long-nav">
             <a class="nav-link js-scroll-trigger" href="#introduction">What is UX</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#research">Research</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#design">Design</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#prototyping">Prototyping</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#testing">Testing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#evaluation">Evaluation</a>
+          <li class="dropdown">
+            <a class="nav-link js-scroll-trigger" data-toggle="dropdown" role= "button" href="#">Process</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="js-scroll-trigger" href="#research">Research</a>
+              </li>
+              <li>
+                <a class="js-scroll-trigger" href="#design">Design</a>
+              </li>
+              <li>
+                <a  class="js-scroll-trigger" href="#prototyping">Prototyping</a>
+              </li>
+              <li>
+                <a class="js-scroll-trigger" href="#testing">Testing</a>
+              </li>
+              <li>
+                <a class="js-scroll-trigger" href="#evaluation">Evaluation</a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#survey">Survey</a>

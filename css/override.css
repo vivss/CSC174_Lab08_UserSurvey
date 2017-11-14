@@ -94,7 +94,12 @@ p {
   padding: 3px;
   white-space: nowrap;
 }
-/*.tip p{
-    margin-left: 0;
 
-}*/
+#long-nav{
+    white-space: nowrap;
+}
+
+.marin-none{
+  margin: 0;
+  padding: 0;
+}
