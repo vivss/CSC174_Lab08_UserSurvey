@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include 'connection.php';
 
 
@@ -78,7 +79,10 @@
 			<td><?php echo $uxsurvey["software"]; ?></td>
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
-			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-name="<?php echo $uxsurvey["first_name"] ?> <?php echo $uxsurvey["last_name"] ?>" href="#">Edit</a></td>
+			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-fname="<?php echo $uxsurvey["first_name"] ?>" 
+				data-lname="<?php echo $uxsurvey["last_name"] ?>" data-email="<?php echo $uxsurvey["email"] ?>" 
+				data-recs="<?php echo $uxsurvey["recommendation"] ?>" data-helpful="<?php echo $uxsurvey["helpful"] ?>" 
+				data-software="<?php echo $uxsurvey["software"] ?>" href="#">Edit</a></td>
 			<td><a class="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#">Delete</a></td>
 			<!-- confirm code from https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete -->
 		</tr>
