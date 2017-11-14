@@ -58,7 +58,7 @@
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
 			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-name="<?php echo $uxsurvey["first_name"] ?> <?php echo $uxsurvey["last_name"] ?>" href="#">Edit</a></td>
-			<td><a class="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
+			<td><a class="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#">Delete</a></td>
 			<!-- confirm code from https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete -->
 		</tr>
 
@@ -73,7 +73,24 @@
       <div class="container">
         <h2 id="thank-message">The record has been updated! Please refresh the page.</h2>
       </div>
-    </section>
+	</section>
+	
+	 <!-- Error messages-->
+	 <section id="error-msg-fname" class="hide">
+      <div class="container">
+        <h2>Your first name is required!</h2>
+      </div>
+	</section>
+	<section id="error-msg-lname" class="hide">
+      <div class="container">
+        <h2>Your last name is required!</h2>
+      </div>
+	</section>
+	<section id="error-msg-email" class="hide">
+      <div class="container">
+        <h2>Your email is required!</h2>
+      </div>
+	</section>
 	<!-- update form -->
 		
 	 <section id="survey" class="hide">
@@ -161,7 +178,7 @@
 
 
 	<br>
-	<a href="index.html" class="btn-lg text-white">Back to the previous form</a>
+	<a href="index.php" class="btn-lg text-white">Back to the previous form</a>
 	</div>
 	</section>
 	<!-- Footer -->

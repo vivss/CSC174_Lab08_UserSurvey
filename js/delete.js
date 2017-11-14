@@ -1,6 +1,7 @@
 $('.delete').click(function() {
-	event.preventDefault();
-	
+    event.preventDefault();
+	if (confirm('Are you sure you want to delete this item?')==true) {
+    event.preventDefault();
     $(this).each(function() {
         var container = $(this);
         var id = container.data('container');
@@ -16,13 +17,15 @@ $('.delete').click(function() {
         success:function(msg)
         {   
             $('#delete-msg').removeClass('hide');
-            $('#delete-msg').append("Item ID"+id+"has been deleted.");
+            $('#delete-msg').append("Item "+id+"has been deleted.");
             $(id_remove).remove();
         }
 		})
     });
 
-	
+} else {
+    return "You clicked cancel!";
+}
 	
    
 	});

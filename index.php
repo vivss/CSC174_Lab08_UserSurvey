@@ -136,6 +136,8 @@
         <h2 id="thank-message"></h2>
       </div>
     </section>
+  
+
     <!-- survey -->
 		<section id="survey">
       <div class="container">
@@ -217,6 +219,7 @@
   			</form>
       </div>
     </section><!--survey-->
+
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
