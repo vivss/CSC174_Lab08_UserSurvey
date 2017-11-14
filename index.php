@@ -19,7 +19,7 @@
 
 <body id="page-top">
   <!-- Navigation -->
-  
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">UX Design Process</a>
@@ -57,7 +57,7 @@
         </ul>
       </div><!--collapse navbar-collapse-->
     </div><!--container-->
-  </nav>  
+  </nav>
   <header class="bg-primary text-left">
     <div class="headersection">
       <h1>The UX Design Process:</h1>
@@ -140,7 +140,7 @@
         <h2 id="thank-message"></h2>
       </div>
     </section>
-  
+
 
     <!-- survey -->
 		<section id="survey">
@@ -206,7 +206,7 @@
 
     				<input type="radio" class="helpful" name="helpful" value="4"  id="radio4">
     				<label for="radio4">4-Agree</label><br>
- 
+
     				<input type="radio" class="helpful" name="helpful" value="5"  id="radio5">
     				<label for="radio5">5-Strongly Agree</label><br><br>
           </div>
