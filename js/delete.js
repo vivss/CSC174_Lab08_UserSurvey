@@ -16,8 +16,11 @@ $('.delete').click(function() {
         data:{'id':id},
         success:function(msg)
         {   
-            $('#delete-msg').removeClass('hide');
-            $('#delete-msg').append("Item "+id+"has been deleted.");
+            $('#delete-msg').text("Item "+id+"has been deleted.").delay(3000).queue(function () {
+                $(this).text('');
+                $(this).dequeue();
+            });
+            
             $(id_remove).remove();
         }
 		})

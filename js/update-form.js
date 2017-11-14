@@ -30,6 +30,20 @@ $('#submit-no-reload').click(function() {
     });
     console.log(helpful);
     
+
+    // check if the required fields are filled
+    if (!fname){
+        alert('Please enter your first name!');
+        return "something is wrong";
+    } else if (!lname) {
+        alert('Please enter your last name!');
+        return "something is wrong";
+    } else if (!email) {
+        alert('Please enter your email!');
+        return "something is wrong";
+    } else {
+
+
     $.ajax({
         url: 'update.php',
         type: 'POST',
@@ -56,8 +70,10 @@ $('#submit-no-reload').click(function() {
             
             $('#thank-message-container').removeClass('hide').delay(3000).queue(function () {
                 $(this).addClass('hide')
+                $(this).dequeue();
             });
             
+        // source of code:https://stackoverflow.com/questions/28510620/delay-doesnt-work-second-time-jquery
             $('#title-edit').text('');
 
             
@@ -65,7 +81,7 @@ $('#submit-no-reload').click(function() {
     });
    
     
-
+    }
     
     
 });

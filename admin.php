@@ -66,7 +66,7 @@
 
 	</table>
 	<!-- delete success message -->
-	<div id="delete-msg" class="hide"></div>
+	<div id="delete-msg"></div>
 	
 	 <!-- Thank you message for the update form-->
 	 <section id="thank-message-container" class="hide">
