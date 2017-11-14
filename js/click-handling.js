@@ -18,8 +18,8 @@ $('.update').click(function(){
 
     //check checkboxes
     var softwareLength = software.length;
-    if (softwareLength > 1){
     $('.software').attr("checked", false);
+    if (softwareLength > 1){
     for (var i = 0; i < softwareLength; i++) {
         
         var elementCheck = '#'+software[i];
