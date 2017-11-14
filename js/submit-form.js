@@ -35,6 +35,9 @@ $('#submit-no-reload').click(function() {
     } else if (!email) {
         alert('Please enter your email!');
         return "something is wrong";
+    } else if (!email.includes('@')) {
+        alert('Please enter a valid email address!');
+        return "something is wrong"; 
     } else {
     
     // sending POST request
