@@ -49,7 +49,7 @@
 		// output data from each row
 ?>
 
-		<tr>
+		<tr id="<?php echo $uxsurvey["ID"]; ?>">
 			<td><?php echo $uxsurvey["ID"]; ?></td>
 			<td><?php echo $uxsurvey["first_name"]; ?></td>
 			<td><?php echo $uxsurvey["last_name"]; ?></td>
@@ -57,6 +57,9 @@
 			<td><?php echo $uxsurvey["software"]; ?></td>
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
+			<td><a href="edit.php?id=<?php echo $uxsurvey["ID"] ?>&fname=<?php echo $uxsurvey["first_name"] ?>&lname=<?php echo $uxsurvey["last_name"] ?>">Edit</a></td>
+			<td><a id="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
+			<!-- confirm code from https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete -->
 		</tr>
 
 <?php } ?>
@@ -75,6 +78,8 @@
 		<!-- /.container -->
 	</footer>
 
+	
+
 	<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -83,7 +88,9 @@
 		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom JavaScript for this theme -->
-    <script src="js/scrolling-nav.js"></script>
+	<script src="js/scrolling-nav.js"></script>
+	<!-- Delete action -->
+	<script src="js/delete-action.js"></script>
 
 </body>
 </html>

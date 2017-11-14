@@ -34,21 +34,27 @@ $('#submit-no-reload').click(function() {
             helpful: helpful
         },
         success: function(msg) {
-            $('#message').addClass('show');
+
+            $('#fname').val(''); 
+            $('#lname').val('');
+            $('#email').val('');
+            $('.helpful').prop('checked', false);
+        
+            $('.software').prop('checked', false); 
+            $('#recs').val('');
+        
+            $('#survey').addClass('hide');
+            
+            $('section#thank-message-container').removeClass('hide');
+            $('#thank-message').append('Thank you '+fname+' for filling out the survey!');
+
+           
+        
         }               
     });
-    $('#fname').val(''); 
-    $('#lname').val('');
-    $('#email').val('');
-    $('.helpful').prop('checked', false);
+   
+    
 
-    $('.software').prop('checked', false); 
-    $('#recs').val('');
-
-    $('#survey').addClass('hide');
-
-    $('section#thank-message-container').removeClass('hide');
-
-    $('#thank-message').append('Thank you '+fname+' for filling out the survey!');
+    
     
 });

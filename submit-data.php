@@ -33,7 +33,6 @@ $query .= ")";
 
 $result = mysqli_query($connection, $query);
 
-echo "Thank you for submitting the survey!";
 
 mysqli_close($connection);
 
