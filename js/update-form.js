@@ -1,15 +1,10 @@
 $('#submit-no-reload').click(function() {
     event.preventDefault();
     var id = $(this).data('forupdate');
-    console.log(id);
     var fname = $("#fname").val();
-    console.log(fname);
     var lname = $("#lname").val();
-    console.log(lname);
     var email = $("#email").val();
-    console.log(email);
     var recs = $("#recs").val();
-    console.log(recs);
     var software = [];
     $('.software').each(function(){
         if($(this).is(":checked"))
@@ -18,7 +13,6 @@ $('#submit-no-reload').click(function() {
         }
     });
     software = software.toString();
-    console.log(software);
 
     // learned from https://www.youtube.com/watch?v=lHLHxi60eo8
 
