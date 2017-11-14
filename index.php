@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+=======
+<?php
+if(isset($_POST['fname'])) {
+  // Process the form
+  
+include 'connection.php';
+
+$fname = Trim(stripslashes($_POST["fname"]));
+$lname = Trim(stripslashes($_POST["lname"]));
+$email = Trim(stripslashes($_POST["email"]));
+$software = $_POST["software"]; //it's an array
+$software = implode(',', $software);
+$helpful = $_POST["helpful"];
+$recommendation = Trim(stripslashes($_POST["recs"]));
+
+
+$fname = mysqli_real_escape_string($connection, $fname);
+$lname = mysqli_real_escape_string($connection, $lname);
+$recommendation = mysqli_real_escape_string($connection, $recommendation);
+
+$query  = "INSERT INTO uxsurvey";
+$query .= " ( email, software, helpful, recommendation, first_name, last_name";
+$query .= ") VALUES (";
+$query .= "  '{$email}', '{$software}', '{$helpful}', '$recommendation', '$fname', '$lname'";
+$query .= ")";
+
+$result = mysqli_query($connection, $query);
+
+//header( 'Location: #survey') ;
+
+
+mysqli_close($connection);
+
+}
+
+?>
+
+
+
+
+
+>>>>>>> c622fe85c3edda64b55694f2d4bdf34349642ee0
 <!DOCTYPE html>
 <html lang = "en">
 
@@ -144,7 +187,7 @@
           <div class="row">
             <div class="col-sm-4 mx-auto">
       				<label for="fname">First Name: </label>
-      				<input type="text" name="fname" id="fname"><br>
+      				<input type="text" name="fname" id="fname" required><br>
             </div>
             <div class="col-sm-4 mx-auto">
               <label for="lname">Last Name: </label>
@@ -152,7 +195,7 @@
             </div>
             <div class="col-sm-4 mx-auto">
     				      <label for="email">Email: </label>
-    				      <input type="email" name="email" id="email"><br><br>
+    				      <input type="email" name="email" id="email" required><br><br>
             </div>
           </div>
   				<!--Checkboxes-->
@@ -216,7 +259,8 @@
   				<input class="btn-lg text-white" type="submit" value="Submit" id="submit-no-reload">
   			</form>
       </div>
-		</section><!--survey-->
+    </section><!--survey-->
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
