@@ -76,3 +76,7 @@ p {
   font-family: 'Gotham Narrow', Arial, sans-serif;
   font-weight: 300;
 }
+
+.hide {
+  display: none !important;
+}

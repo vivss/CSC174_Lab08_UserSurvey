@@ -5,6 +5,7 @@
 	// 2. Perform database query
 	$query  = "SELECT * ";
 	$query .= "FROM uxsurvey ";
+	$query .= "ORDER BY created_at DESC";
 
 
 	$result = mysqli_query($connection, $query);

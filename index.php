@@ -1,42 +1,3 @@
-<?php
-if(isset($_POST['fname'])) {
-  // Process the form
-  
-include 'connection.php';
-
-$fname = Trim(stripslashes($_POST["fname"]));
-$lname = Trim(stripslashes($_POST["lname"]));
-$email = Trim(stripslashes($_POST["email"]));
-$software = $_POST["software"]; //it's an array
-$software = implode(',', $software);
-$helpful = $_POST["helpful"];
-$recommendation = Trim(stripslashes($_POST["recs"]));
-
-
-$fname = mysqli_real_escape_string($connection, $fname);
-$lname = mysqli_real_escape_string($connection, $lname);
-$recommendation = mysqli_real_escape_string($connection, $recommendation);
-
-$query  = "INSERT INTO uxsurvey";
-$query .= " ( email, software, helpful, recommendation, first_name, last_name";
-$query .= ") VALUES (";
-$query .= "  '{$email}', '{$software}', '{$helpful}', '$recommendation', '$fname', '$lname'";
-$query .= ")";
-
-$result = mysqli_query($connection, $query);
-
-echo "Thank you for submitting the survey!";
-
-mysqli_close($connection);
-
-}
-
-?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang = "en">
 
@@ -168,6 +129,14 @@ mysqli_close($connection);
       </div>
     </section>
     <!--content-->
+
+    <!-- Thank you message -->
+    <section id="thank-message-container" class="hide">
+      <div class="container">
+        <h2 id="thank-message"></h2>
+      </div>
+    </section>
+    <!-- survey -->
 		<section id="survey">
       <div class="container">
   			<h2>Feedback Survey</h2>
@@ -179,7 +148,7 @@ mysqli_close($connection);
             </div>
             <div class="col-sm-4 mx-auto">
               <label for="lname">Last Name: </label>
-              <input type="text" name="lname" id="fname"><br>
+              <input type="text" name="lname" id="lname"><br>
             </div>
             <div class="col-sm-4 mx-auto">
     				      <label for="email">Email: </label>
@@ -192,22 +161,22 @@ mysqli_close($connection);
               What design software do you use? <br>
             </div>
             <div class="col-md-4 mx-auto">
-              <input type="checkbox" name="software[]"value="balsamiq" id="balsamiq">
+              <input type="checkbox" class="software" name="software[]" value="balsamiq" id="balsamiq">
               <label for="balsamiq">Balsamiq</label><br>
 
-              <input type="checkbox" name="software[]"value="sketch" id="sketch">
+              <input type="checkbox" class="software" name="software[]"value="sketch" id="sketch">
               <label for="sketch">Sketch</label><br>
 
-              <input type="checkbox" name="software[]"value="illustrator" id="illustrator">
+              <input type="checkbox" class="software" name="software[]"value="illustrator" id="illustrator">
               <label for="illustrator">Adobe Illustrator</label><br>
 
-              <input type="checkbox" name="software[]" value="invision" id="invision">
+              <input type="checkbox" class="software" name="software[]" value="invision" id="invision">
               <label for="invision">Invision</label><br>
 
-              <input type="checkbox" name="software[]"value="another" id="another">
+              <input type="checkbox" class="software" name="software[]"value="another" id="another">
               <label for="another">Another app</label><br>
 
-              <input type="checkbox" name="software[]" value="none" id="none">
+              <input type="checkbox" class="software" name="software[]" value="none" id="none">
               <label for="none">I don't use any design software</label><br><br>
             </div>
             <div class="col-md-4 mx-auto">
@@ -220,19 +189,19 @@ mysqli_close($connection);
     				      The information on this page was helpful: <br>
             </div>
             <div class="col-md-4 mx-auto">
-    				<input type="radio" name="helpful" value="1" id="radio1">
+    				<input type="radio" class="helpful" name="helpful" value="1" id="radio1">
     				<label for="radio1">1-Strongly Disagree</label><br>
 
-    				<input type="radio" name="helpful" value="2"  id="radio2">
+    				<input type="radio" class="helpful" name="helpful" value="2"  id="radio2">
     				<label for="radio2">2-Disagree</label><br>
 
-    				<input type="radio" name="helpful" value="3"  id="radio3">
+    				<input type="radio" class="helpful" name="helpful" value="3"  id="radio3">
     				<label for="radio3">3-Neutral</label><br>
 
-    				<input type="radio" name="helpful" value="4"  id="radio4">
+    				<input type="radio" class="helpful" name="helpful" value="4"  id="radio4">
     				<label for="radio4">4-Agree</label><br>
  
-    				<input type="radio" name="helpful" value="5"  id="radio5">
+    				<input type="radio" class="helpful" name="helpful" value="5"  id="radio5">
     				<label for="radio5">5-Strongly Agree</label><br><br>
           </div>
           <div class="col-md-4">
@@ -244,7 +213,7 @@ mysqli_close($connection);
   				<textarea name="recs" id="recs" rows="8" cols="80"></textarea><br><br>
         </div>
         </div>
-  				<input class="btn-lg text-white" type="submit" value="Submit">
+  				<input class="btn-lg text-white" type="submit" value="Submit" id="submit-no-reload">
   			</form>
       </div>
 		</section><!--survey-->
@@ -265,5 +234,6 @@ mysqli_close($connection);
 
       <!-- Custom JavaScript for this theme -->
       <script src="js/scrolling-nav.js"></script>
+      <script src="js/submit-form.js"></script>
 </body>
 </html>
