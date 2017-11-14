@@ -1,4 +1,4 @@
-$('#delete').click(function() {
+$('.delete').click(function() {
 	event.preventDefault();
 	
     $(this).each(function() {

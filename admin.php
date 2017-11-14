@@ -57,15 +57,108 @@
 			<td><?php echo $uxsurvey["software"]; ?></td>
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
-			<td><a href="edit.php?id=<?php echo $uxsurvey["ID"] ?>&fname=<?php echo $uxsurvey["first_name"] ?>&lname=<?php echo $uxsurvey["last_name"] ?>">Edit</a></td>
-			<td><a id="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
+			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-name="<?php echo $uxsurvey["first_name"] ?> <?php echo $uxsurvey["last_name"] ?>" href="#">Edit</a></td>
+			<td><a class="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a></td>
 			<!-- confirm code from https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete -->
 		</tr>
 
 <?php } ?>
 
 	</table>
+	<!-- delete success message -->
 	<div id="delete-msg" class="hide"></div>
+	
+	 <!-- Thank you message for the update form-->
+	 <section id="thank-message-container" class="hide">
+      <div class="container">
+        <h2 id="thank-message">The record has been updated! Please refresh the page.</h2>
+      </div>
+    </section>
+	<!-- update form -->
+		
+	 <section id="survey" class="hide">
+      <div class="container">
+  			<h2 id="title-edit"></h2>
+  			<form method="post" action="update.php">
+          <div class="row">
+            <div class="col-sm-4 mx-auto">
+      				<label for="fname">First Name: </label>
+      				<input type="text" name="fname" id="fname" required><br>
+            </div>
+            <div class="col-sm-4 mx-auto">
+              <label for="lname">Last Name: </label>
+              <input type="text" name="lname" id="lname"><br>
+            </div>
+            <div class="col-sm-4 mx-auto">
+    				      <label for="email">Email: </label>
+    				      <input type="email" name="email" id="email" required><br><br>
+            </div>
+          </div>
+  				<!--Checkboxes-->
+          <div class="row">
+            <div class="col-md-4 mx-auto">
+              What design software do you use? <br>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <input type="checkbox" class="software" name="software[]" value="balsamiq" id="balsamiq">
+              <label for="balsamiq">Balsamiq</label><br>
+
+              <input type="checkbox" class="software" name="software[]"value="sketch" id="sketch">
+              <label for="sketch">Sketch</label><br>
+
+              <input type="checkbox" class="software" name="software[]"value="illustrator" id="illustrator">
+              <label for="illustrator">Adobe Illustrator</label><br>
+
+              <input type="checkbox" class="software" name="software[]" value="invision" id="invision">
+              <label for="invision">Invision</label><br>
+
+              <input type="checkbox" class="software" name="software[]"value="another" id="another">
+              <label for="another">Another app</label><br>
+
+              <input type="checkbox" class="software" name="software[]" value="none" id="none">
+              <label for="none">I don't use any design software</label><br><br>
+            </div>
+            <div class="col-md-4 mx-auto">
+            </div>
+          </div>
+
+          <div class="row">
+    				<!--Radio Buttons-->
+    				<div class="col-md-4 mx-auto">
+    				      The information on this page was helpful: <br>
+            </div>
+            <div class="col-md-4 mx-auto">
+    				<input type="radio" class="helpful" name="helpful" value="1" id="radio1">
+    				<label for="radio1">1-Strongly Disagree</label><br>
+
+    				<input type="radio" class="helpful" name="helpful" value="2"  id="radio2">
+    				<label for="radio2">2-Disagree</label><br>
+
+    				<input type="radio" class="helpful" name="helpful" value="3"  id="radio3">
+    				<label for="radio3">3-Neutral</label><br>
+
+    				<input type="radio" class="helpful" name="helpful" value="4"  id="radio4">
+    				<label for="radio4">4-Agree</label><br>
+ 
+    				<input type="radio" class="helpful" name="helpful" value="5"  id="radio5">
+    				<label for="radio5">5-Strongly Agree</label><br><br>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+  				<label for="recs">Do you have any recommendations for our site? </label><br>
+  				<textarea name="recs" id="recs" rows="8" cols="80"></textarea><br><br>
+        </div>
+        </div>
+  				<input data-forupdate='whatever' class="btn-lg text-white" type="submit" value="Submit" id="submit-no-reload">
+  			</form>
+      </div>
+	</section><!--survey-->
+	
+
+
 
 	<br>
 	<a href="index.html" class="btn-lg text-white">Back to the previous form</a>
@@ -92,6 +185,9 @@
 	<script src="js/scrolling-nav.js"></script>
 	<!-- Delete action -->
 	<script src="js/delete.js"></script>
+	<!-- Update action -->
+	<script src="js/click-handling.js"></script>
+	<script src="js/update-form.js"></script> 
 
 </body>
 </html>
