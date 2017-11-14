@@ -25,7 +25,8 @@ $query .= ")";
 
 $result = mysqli_query($connection, $query);
 
-echo "Thank you for submitting the survey!";
+//header( 'Location: #survey') ;
+
 
 mysqli_close($connection);
 
@@ -168,6 +169,7 @@ mysqli_close($connection);
       </div>
     </section>
     <!--content-->
+
 		<section id="survey">
       <div class="container">
   			<h2>Feedback Survey</h2>
@@ -175,15 +177,15 @@ mysqli_close($connection);
           <div class="row">
             <div class="col-sm-4 mx-auto">
       				<label for="fname">First Name: </label>
-      				<input type="text" name="fname" id="fname"><br>
+      				<input type="text" name="fname" id="fname" required><br>
             </div>
             <div class="col-sm-4 mx-auto">
               <label for="lname">Last Name: </label>
-              <input type="text" name="lname" id="fname"><br>
+              <input type="text" name="lname" id="fname" required><br>
             </div>
             <div class="col-sm-4 mx-auto">
     				      <label for="email">Email: </label>
-    				      <input type="email" name="email" id="email"><br><br>
+    				      <input type="email" name="email" id="email" required><br><br>
             </div>
           </div>
   				<!--Checkboxes-->
@@ -247,7 +249,8 @@ mysqli_close($connection);
   				<input class="btn-lg text-white" type="submit" value="Submit">
   			</form>
       </div>
-		</section><!--survey-->
+    </section><!--survey-->
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
