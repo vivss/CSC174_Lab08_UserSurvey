@@ -41,7 +41,7 @@
 	</header>
 	<section id="tablebody">
 		<div class="container">
-	<table border>
+	<table border id="data-table">
 
 <?php
 	// 3. Use returned data (if any)
@@ -71,7 +71,7 @@
 	 <!-- Thank you message for the update form-->
 	 <section id="thank-message-container" class="hide">
       <div class="container">
-        <h2 id="thank-message">The record has been updated! Please refresh the page.</h2>
+        <h2 id="thank-message"></h2>
       </div>
 	</section>
 	

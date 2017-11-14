@@ -68,16 +68,17 @@ $('#submit-no-reload').click(function() {
         
             $('.software').prop('checked', false); 
             $('#recs').val('');
+
+            $('table#data-table').addClass('hide');
         
             $('section#survey').toggleClass('hide');
             
-            $('#thank-message-container').removeClass('hide').delay(3000).queue(function () {
-                $(this).addClass('hide')
-                $(this).dequeue();
-            });
+            $('#thank-message-container').toggleClass('hide');
+            $('#thank-message').text('The record number '+id+ ' has been updated! Please refresh the page.')
             
         // source of code:https://stackoverflow.com/questions/28510620/delay-doesnt-work-second-time-jquery
             $('#title-edit').text('');
+
 
             
         }               
