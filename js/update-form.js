@@ -68,11 +68,18 @@ $('#submit-no-reload').click(function() {
             $('section#survey').toggleClass('hide');
             
             $('#thank-message-container').toggleClass('hide');
-            $('#thank-message').text('The record number '+id+ ' has been updated! Please refresh the page.')
+            $('#thank-message').text('The record number '+id+ ' has been updated! The page will refresh automatically in 5 seconds!')
             
         // source of code:https://stackoverflow.com/questions/28510620/delay-doesnt-work-second-time-jquery
             $('#title-edit').text('');
 
+       
+       
+            // source of code for redirecting page: https://gist.github.com/Joel-James/62d98e8cb3a1b6b05102
+        window.setTimeout(function(){
+            window.location = "admin.php";
+             }, 5000)    
+       
 
             
         }               
