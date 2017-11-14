@@ -42,29 +42,22 @@
 	</header>
 	<section id="tablebody">
 		<div class="container">
-	<table border id="data-table">
-
-    <div id="tip-q1" class="tip">
-      Design software used
-    </div>
-
-    <div id="tip-q2" class="tip">
-      Page helpfulness
-    </div>
-
-    <div id="tip-q3" class="tip">
-      Recommendations for site
-    </div>
+	<table class= "table table-striped">
     <!--Table head-->
-    <tr id="admin-head">
-      <td>ID</td>
-      <td>fname</td>
-      <td>lname</td>
-      <td>email</td>
-      <td id="table-q1">Q1</td>
-      <td id="table-q2">Q2</td>
-      <td id="table-q3">Q3</td>
-    </tr>
+			<thead>
+    		<tr>
+		    	<th  style="width: 5%;">ID</th>
+		    	<th  style="width: 10%;">First name</th>
+		    	<th  style="width: 10%;">Last name</th>
+		    	<th  style="width: 16%;">Email</th>
+		    	<th id="table-q1"  style="width: 15%;">Software</th>
+		    	<th id="table-q2"  style="width: 8%;">Helpfulness</th>
+		    	<th id="table-q3"  style="width: 20%;">Feedback</th>
+					<th  style="width: 6%;">Edit</th>
+					<th  style="width: 10%;">Delete</th>
+    		</tr>
+			</thead>
+			<tbody>
 <?php
 	// 3. Use returned data (if any)
 	while($uxsurvey = mysqli_fetch_assoc($result)) {
@@ -72,34 +65,34 @@
 ?>
 
 		<tr id="<?php echo $uxsurvey["ID"]; ?>">
-			<td><?php echo $uxsurvey["ID"]; ?></td>
+			<th><?php echo $uxsurvey["ID"]; ?></th>
 			<td><?php echo $uxsurvey["first_name"]; ?></td>
 			<td><?php echo $uxsurvey["last_name"]; ?></td>
 			<td><?php echo $uxsurvey["email"]; ?></td>
 			<td><?php echo $uxsurvey["software"]; ?></td>
 			<td><?php echo $uxsurvey["helpful"]; ?></td>
 			<td><?php echo $uxsurvey["recommendation"]; ?></td>
-			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-fname="<?php echo $uxsurvey["first_name"] ?>" 
-				data-lname="<?php echo $uxsurvey["last_name"] ?>" data-email="<?php echo $uxsurvey["email"] ?>" 
-				data-recs="<?php echo $uxsurvey["recommendation"] ?>" data-helpful="<?php echo $uxsurvey["helpful"] ?>" 
+			<td><a class="update" data-id="<?php echo $uxsurvey["ID"] ?>" data-fname="<?php echo $uxsurvey["first_name"] ?>"
+				data-lname="<?php echo $uxsurvey["last_name"] ?>" data-email="<?php echo $uxsurvey["email"] ?>"
+				data-recs="<?php echo $uxsurvey["recommendation"] ?>" data-helpful="<?php echo $uxsurvey["helpful"] ?>"
 				data-software="<?php echo $uxsurvey["software"] ?>" href="#">Edit</a></td>
 			<td><a class="delete" data-container="<?php echo $uxsurvey["ID"] ?>" href="#">Delete</a></td>
 			<!-- confirm code from https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete -->
 		</tr>
 
 <?php } ?>
-
+	</tbody>
 	</table>
 	<!-- delete success message -->
 	<div id="delete-msg"></div>
-	
+
 	 <!-- Thank you message for the update form-->
 	 <section id="thank-message-container" class="hide">
       <div class="container">
         <h2 id="thank-message"></h2>
       </div>
 	</section>
-	
+
 	 <!-- Error messages-->
 	 <section id="error-msg-fname" class="hide">
       <div class="container">
@@ -117,7 +110,7 @@
       </div>
 	</section>
 	<!-- update form -->
-		
+
 	 <section id="survey" class="hide">
       <div class="container">
   			<h2 id="title-edit"></h2>
@@ -181,7 +174,7 @@
 
     				<input type="radio" class="helpful" name="helpful" value="4"  id="radio4">
     				<label for="radio4">4-Agree</label><br>
- 
+
     				<input type="radio" class="helpful" name="helpful" value="5"  id="radio5">
     				<label for="radio5">5-Strongly Agree</label><br><br>
           </div>
@@ -198,7 +191,7 @@
   			</form>
       </div>
 	</section><!--survey-->
-	
+
 	<br>
 	<a href="index.php" class="btn-lg text-white">Back to the previous form</a>
 	</div>
@@ -211,7 +204,7 @@
 		<!-- /.container -->
 	</footer>
 
-	
+
 
 	<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
@@ -226,8 +219,8 @@
 	<script src="js/delete.js"></script>
 	<!-- Update action -->
 	<script src="js/click-handling.js"></script>
-	<script src="js/update-form.js"></script> 
-  <script src="js/hover-tip.js"></script> 
+	<script src="js/update-form.js"></script>
+  <script src="js/hover-tip.js"></script>
 </body>
 </html>
 

@@ -57,10 +57,12 @@ font-weight: 300;
   padding-top:0%;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 0.75;
   letter-spacing: 1.35px;
   font-family: 'Bebas Neue', Arial, sans-serif;
+  color: #e55912;
+  text-shadow: 3px 3px black;
 }
 h2 {
   font-family: 'Myriad Pro Semibold Condensed', Arial, sans-serif;
@@ -77,24 +79,10 @@ p {
   font-weight: 300;
 }
 
+.table{
+  display: block;
+  word-break: break-word;
+}
 .hide {
   display: none !important;
 }
-
-#admin-head td {
-  font-weight: bold;
-}
-
-.tip {
-  display: none;
-  position: absolute;
-  color: white;
-  background-color: rgb(67, 76, 91);
-  border-radius: 6px;
-  padding: 3px;
-  white-space: nowrap;
-}
-/*.tip p{
-    margin-left: 0;
-
-}*/
